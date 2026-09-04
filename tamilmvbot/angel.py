@@ -19,7 +19,7 @@ load_dotenv()
 # ============ WOODctaft =================
 TOKEN = os.getenv('TOKEN')
 WEBHOOK_URL = os.getenv('WEBHOOK_URL')
-TAMILMV_URL = os.getenv('TAMILMV_URL', 'https://www.1tamilmv.boo')
+TAMILMV_URL = os.getenv('TAMILMV_URL')
 PORT = int(os.getenv('PORT', 3000))
 # ========================================
 bot = telebot.TeleBot(TOKEN, parse_mode='HTML')
@@ -49,15 +49,15 @@ def random_answer(message):
     keyboard = types.InlineKeyboardMarkup()
     keyboard.add(
         types.InlineKeyboardButton(
-            '🔗 GitHub 🔗',
-            url='https://github.com/SudoR2spr'),
+            '🐬',
+            url='https://t.me/albwaiting_area'),
         types.InlineKeyboardButton(
             text="⚡ Powered By",
-            url='https://t.me/Opleech_WD'))
+            url='https://t.me/albwaiting_area'))
 
     bot.send_photo(
         chat_id=message.chat.id,
-        photo='https://graph.org/file/4e8a1172e8ba4b7a0bdfa.jpg',
+        photo='https://i.ibb.co/bjF1N1jL/IMG-20260827-192415-019.jpg',
         caption=text_message,
         reply_markup=keyboard
     )
